@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
 import java.awt.Toolkit;
-
+// analisar bugs
 @SuppressWarnings("serial")
 public class Sucesso extends JDialog {
 
@@ -33,7 +33,7 @@ public class Sucesso extends JDialog {
 			e.printStackTrace();
 		}
 	}
-
+// banco de dados
 	/**
 	 * Create the dialog.
 	 */

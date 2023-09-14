@@ -22,7 +22,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 public class Login extends JFrame {
-
+// menu já mexido
 	private JPanel contentPane;
 	private JTextField txtUsuario;
 	private JPasswordField txtContrasena;

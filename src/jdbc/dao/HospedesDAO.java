@@ -13,7 +13,7 @@ private Connection connection;
 	public HospedesDAO(Connection connection) {
 		this.connection = connection;
 	}
-	
+	//tem que ver o banco de dados
 	public void salvar(Hospedes hospedes) {
 		try {
 			String sql = "INSERT INTO hospedes (nome, sobrenome, data_nascimento, nacionalidade, telefone, idReserva) VALUES (?, ?, ?, ?,?,?)";

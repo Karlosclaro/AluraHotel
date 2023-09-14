@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-
+//basic link do bd
 public class ConnectionFactory {
 
 	public DataSource dataSource;

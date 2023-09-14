@@ -1,7 +1,7 @@
 package jdb.factory;
 import java.sql.Connection;
 import java.sql.SQLException;
-
+// funcionou de primeira
 public class TestaConexao {
 
 	public static void main(String[] args) throws SQLException {

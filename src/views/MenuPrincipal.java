@@ -19,7 +19,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-
+// houve troca de senha
 @SuppressWarnings("serial")
 public class MenuPrincipal extends JFrame {
 

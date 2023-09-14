@@ -7,7 +7,7 @@ import jdb.factory.ConnectionFactory;
 import jdbc.dao.HospedesDAO;
 import jdbc.modelo.Hospedes;
 
-
+// falta import
 public class HospedesController {
 	 private HospedesDAO hospedesDAO;
 

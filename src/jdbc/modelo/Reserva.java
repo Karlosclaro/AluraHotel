@@ -2,6 +2,7 @@ package jdbc.modelo;
 
 import java.sql.Date;
 
+// criancao de classes
 public class Reserva {
 	
 	private Integer id;
@@ -54,6 +55,7 @@ public class Reserva {
 		return formaPagamento;
 	}
 
+	//traducao?
 	
 //	@Override
 //	public String toString() {
