@@ -26,6 +26,7 @@ import java.awt.event.MouseMotionAdapter;
 import java.awt.Toolkit;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import java.util.Objects;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
@@ -326,6 +327,27 @@ public class ReservasView extends JFrame {
 		btnProximo.add(lblProximo);
 	}
 
+
+	private void salvarReserva() {
+		try {
+			String dataE = ((JTextField)txtDataE.getDateEditor().getUiComponent()).getText();
+			String dataS = ((JTextField)txtDataS.getDateEditor().getUiComponent()).getText();
+			Reserva reserva = new Reserva(Date.valueOf(dataE), Date.valueOf(dataS), ReservasView.txtValor.getText(), ReservasView.txtFormaPagamento.getSelectedItem().toString());
+			this.reservasController.salvar(reserva);
+			RegistroHospede hospede = new RegistroHospede(Reserva.getId());
+			hospede.setVisible(true);
+			dispose();
+
+		} catch (Exception ex) {
+			JOptionPane.showMessageDialog(contentPane, "Error: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+		}
+
+			JOptionPane.showMessageDialog(contentPane, "Registro salvo, Número de reserva: " + jdbc.modelo.Reserva.getId().toString());
+		RegistroHospede registroHospede = new RegistroHospede(jdbc.modelo.Reserva.getId());
+		registroHospede.setVisible(true);
+		dispose();
+		}
+
 	private void calcularValor(JDateChooser dataE,JDateChooser dataS) {
 		if(dataE.getDate() != null && dataS.getDate() !=null) {
 			Calendar inicio = dataE.getCalendar();
@@ -343,20 +365,6 @@ public class ReservasView extends JFrame {
 		}
 	}
 
-	private void salvarReserva() {
-		try {
-			String dataE = ((JTextField)txtDataE.getDateEditor().getUiComponent()).getText();
-			String dataS = ((JTextField)txtDataS.getDateEditor().getUiComponent()).getText();
-			Reserva reserva = new Reserva(Date.valueOf(dataE), Date.valueOf(dataS), ReservasView.txtValor.getText(), ReservasView.txtFormaPagamento.getSelectedItem().toString());
-			this.reservasController.salvar(reserva);
-			RegistroHospede hospede = new RegistroHospede(reserva.getId());
-			hospede.setVisible(true);
-			dispose();
-
-		} catch (Exception ex) {
-			JOptionPane.showMessageDialog(contentPane, "Error: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
-		}
-	}
 	
 	 private void headerMousePressed(java.awt.event.MouseEvent evt) {
 	        xMouse = evt.getX();

@@ -1,31 +1,16 @@
 package views;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import java.awt.Color;
 import com.toedter.calendar.JDateChooser;
-
 import jdbc.controller.HospedesController;
 import jdbc.controller.ReservasController;
 import jdbc.modelo.Hospedes;
-import jdbc.modelo.Reserva;
 
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import java.awt.Font;
-import javax.swing.ImageIcon;
-import java.awt.SystemColor;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.Format;
-import java.awt.Toolkit;
-import javax.swing.SwingConstants;
-import javax.swing.JSeparator;
 
 @SuppressWarnings("serial")
 public class RegistroHospede extends JFrame {

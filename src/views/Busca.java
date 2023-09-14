@@ -46,7 +46,7 @@ public class Busca extends JFrame {
 	int xMouse, yMouse;
 	String reserva;
 	String hospedes;
-
+	private ReservasController reservasController;
 	/**
 	 * Launch the application.
 	 */
@@ -69,6 +69,7 @@ public class Busca extends JFrame {
 	public Busca() {
 		this.reservaController = new ReservasController();
 		this.hospedesController = new HospedesController();
+
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Busca.class.getResource("/imagenes/lupa2.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
